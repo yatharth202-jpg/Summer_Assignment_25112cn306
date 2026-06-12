@@ -1,4 +1,4 @@
-//Write a program to Count digitd in a number
+//Write a program to Count digit of a number
 import java.util.*;
 
 public class Q4 {
