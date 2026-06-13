@@ -1,4 +1,3 @@
-package Day3;
 //WAP to print prime number in a range
 import java.util.*;
 
