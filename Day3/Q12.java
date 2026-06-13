@@ -1,3 +1,4 @@
+package Day3;
 //WAP to find LCM of two number
 
 import java.util.*;

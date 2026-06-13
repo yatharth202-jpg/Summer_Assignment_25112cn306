@@ -1,3 +1,4 @@
+package Day3;
 //WAP to find GCD of two numbers
 import java.util.*;
 
