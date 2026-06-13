@@ -1,14 +1,12 @@
 //WAP to print prime number in a range
 import java.util.*;
 
-public class Q10  {
+public class Q10{
 
      public static boolean isPrime(int n) {
-     int count = 0;
-
+    
      // 0, 1 negative numbers are not prime
      if (n < 2){
-     System.out.println("Given Number is not a prime number");
        return false;
      }
      // checking the number of divisors b/w 1 and the number n-1
@@ -24,7 +22,7 @@ public class Q10  {
    Scanner sc = new Scanner(System.in);
 
    //Taking input
-   System.out.print("Enter the ranger : ");
+   System.out.print("Enter the range : ");
 
      int lower = 1;
      int upper = sc.nextInt();
