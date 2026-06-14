@@ -18,7 +18,7 @@ public class Q15 {
             count++;   
         }
 
-        //checking fi]or armstrong number
+        //checking for armstrong number
            num = OriNum;
         while(num != 0) {
            int rem = num%10 ;
