@@ -1,45 +1,46 @@
-//WAP to print factors of a number
-import java.util.Scanner;
+import java.util.*;
 
 public class Q19 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.print("Enter a number: ");
-        int n = sc.nextInt();
-        
-        System.out.print("Prime factors: ");
-        printPrimeFactors(n);
-        
-        sc.close();
+    public static void main(String args[]) {
+     Scanner sc = new Scanner(System.in);
+
+     //Taking input
+     System.out.print("Enter a number : ");
+     int n = sc.nextInt();
+    
+     //for 0 and 1 
+    if( n<2) {
+
+         System.out.print("The prime factors of this number is : " + n);
+    
+    } else {
+
+     System.out.print("The prime factors of this number is : " + 1 + " ");
+      
+     for(int i = 2; i<=n ; i++) {
+
+        //checking condions
+        if(n%i == 0 && isPrime(i) == true) {
+             System.out.print(i +" ");
+        }
+
+     }
+    }  
+       sc.close();
     }
+    public static boolean isPrime(int n) {
 
-    public static void printPrimeFactors(int n) {
-        // Handle negative numbers, 0, and 1
-        if (n <= 1) {
-            System.out.println("No prime factors for numbers less than or equal to 1.");
-            return;
+        //for 0 and 1 
+        if( n<2 ) {
+          return false;
         }
-
-        //Print the number of 2s that divide n
-        while (n % 2 == 0) {
-            System.out.print(2 + " ");
-            n /= 2;
-        }
-
-        // n must be odd at this point. Loop for odd numbers up to sqrt(n)
-        for (int i = 3; i * i <= n; i += 2) {
-            // While i divides n, print i and divide n
-            while (n % i == 0) {
-                System.out.print(i + " ");
-                n /= i;
+        
+        for(int i = 2; i< n ; i++) {
+            if(n%i == 0) {
+                return false;
             }
-        }
-
-        //If n is still greater than 2, then n itself is prime
-        if (n > 2) {
-            System.out.print(n);
-        }
-        System.out.println();
     }
+    return true;
 }
+}
+

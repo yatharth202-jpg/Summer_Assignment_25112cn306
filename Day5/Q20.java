@@ -1,38 +1,48 @@
 //WAP to find largest prime factor
-import java.util.Scanner;
+import java.util.*;
 
 public class Q20 {
-    public static long getLargestPrimeFactor(long n) {
-        long maxPrime = -1;
+    public static void main(String args[]) {
+     Scanner sc = new Scanner(System.in);
 
-        // Handle even numbers first
-        while (n % 2 == 0) {
-            maxPrime = 2;
-            n >>= 1; // Equivalent to n / 2
+     //Taking input
+     System.out.print("Enter a number : ");
+     int n = sc.nextInt();
+     int MaxPrime = -1;
+ 
+     //for 0 and 1 
+     if( n<2) {
+
+         System.out.print("The largest prime factors of this number is : " + n);
+    
+     } else {
+   
+     for(int i = 2; i<=n ; i++) {
+
+        //checking condions
+        if(n%i == 0 && isPrime(i) == true) {
+             MaxPrime = i;
         }
 
-        // Handle odd numbers from 3 up to the square root of n
-        for (long i = 3; i <= Math.sqrt(n); i += 2) {
-            while (n % i == 0) {
-                maxPrime = i;
-                n /= i;
-            }
-        }
-
-        // If the remaining n is a prime number greater than 2
-        if (n > 2) {
-            maxPrime = n;
-        }
-
-        return maxPrime;
+     }
+       System.out.print("The max prime factors of this number is : " + MaxPrime );
+   
+    }  
+       sc.close();
     }
+    public static boolean isPrime(int n) {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        long num = scanner.nextLong();
+        //for 0 and 1 
+        if( n<2 ) {
+          return false;
+        }
         
-        System.out.println("The largest prime factor is: " + getLargestPrimeFactor(num));
-        scanner.close();
+        for(int i = 2; i< n ; i++) {
+            if(n%i == 0) {
+                return false;
+            }
     }
+    return true;
 }
+}
+
