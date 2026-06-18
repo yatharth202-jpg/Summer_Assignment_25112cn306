@@ -1,4 +1,4 @@
-//WAP to vheck number is a strong number or not
+//WAP to check number is a strong number or not
 import java.util.*;
 
 public class Q18 {
