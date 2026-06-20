@@ -31,6 +31,8 @@ public class Q10{
      for (int i = lower; i <= upper; i++)
        if (isPrime (i))
         System.out.print(i+" ");
+
+     sc.close();
    }
    
  }
