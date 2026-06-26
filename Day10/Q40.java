@@ -8,7 +8,7 @@ WAP to print character triangle pattern
  */
 import java.util.Scanner;
 
-public class Day40 {
+public class Q40 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
