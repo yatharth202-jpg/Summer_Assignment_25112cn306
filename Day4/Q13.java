@@ -19,6 +19,7 @@ public class Q13 {
 
         System.out.print(a + " " + b + " ");
 
+        sc.close();
     }
 }
 }
