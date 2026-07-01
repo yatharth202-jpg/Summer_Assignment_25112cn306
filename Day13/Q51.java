@@ -24,6 +24,7 @@ public class Q51 {
             numbers[i] = sc.nextInt();
         }
 
+        System.out.println(lgst);
         int smallest = numbers[0];
         int largest = numbers[0];
 
