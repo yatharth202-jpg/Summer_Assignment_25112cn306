@@ -1,9 +1,10 @@
 package Assignment.Day12;
 
-//WAP to write function for palendrome
+//WAP to write function for palindrome
 import java.util.Scanner;
 
 public class Q45 {
+
 
     public static boolean IsPalendrome(int num) {
         int OriginalNum = num;
